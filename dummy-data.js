@@ -830,32 +830,38 @@ $(document).on('ready', function() {
 
 	// New row function
 	$(document).on("click", "#page1", function() { 
+		$()
 		for (var i = 0; i < 19; i++) {
-			table.append("<tr><td>" + player[i].username + "</td><td>" + player[i].fullname + "</td><td>" + player[i].region + "</td><td>" + player[i].race + "</td><td>" + player[i].wins + "</td><td>" + player[i].losses + "</td><tr>");
-	}
-
-	// $(document).on("click", "#page2", function() { 
-	// 	$('#1results').remove();
-	// 	for (var i = 20; i < 39; i++) {
-	// 		table.append("<tr><td>" + player[i].username + "</td><td>" + player[i].fullname + "</td><td>" + player[i].region + "</td><td>" + player[i].race + "</td><td>" + player[i].wins + "</td><td>" + player[i].losses + "</td><tr>");
-	// }
-
-	// $(document).on("click", "#page3", function() { 
-	// 	for (var i = 40; i < 59; i++) {
-	// 		table.append("<tr><td>" + player[i].username + "</td><td>" + player[i].fullname + "</td><td>" + player[i].region + "</td><td>" + player[i].race + "</td><td>" + player[i].wins + "</td><td>" + player[i].losses + "</td><tr>");
-	// }
-
-	// $(document).on("click", "#page4", function() { 
-	// 	for (var i = 60; i < 79; i++) {
-	// 		table.append("<tr><td>" + player[i].username + "</td><td>" + player[i].fullname + "</td><td>" + player[i].region + "</td><td>" + player[i].race + "</td><td>" + player[i].wins + "</td><td>" + player[i].losses + "</td><tr>");
-	// }
-
-	// $(document).on("click", "#page5", function() { 
-	// 	for (var i = 80; i < 99; i++) {
-	// 		table.append("<tr><td>" + player[i].username + "</td><td>" + player[i].fullname + "</td><td>" + player[i].region + "</td><td>" + player[i].race + "</td><td>" + player[i].wins + "</td><td>" + player[i].losses + "</td><tr>");
-	// }
-
+			$('tbody').append("<tr><td>" + player[i].username + "</td><td>" + player[i].fullname + "</td><td>" + player[i].region + "</td><td>" + player[i].race + "</td><td>" + player[i].wins + "</td><td>" + player[i].losses + "</td><tr>");
+		} // end for loop
 	});
+
+	$(document).on("click", "#page2", function() { 
+		$('.dynamicTable').empty();
+		for (var i = 20; i < 39; i++) {
+			table.append("<tr><td>" + player[i].username + "</td><td>" + player[i].fullname + "</td><td>" + player[i].region + "</td><td>" + player[i].race + "</td><td>" + player[i].wins + "</td><td>" + player[i].losses + "</td><tr>");
+		}
+	});	
+
+	$(document).on("click", "#page3", function() { 
+		for (var i = 40; i < 59; i++) {
+			table.append("<tr><td>" + player[i].username + "</td><td>" + player[i].fullname + "</td><td>" + player[i].region + "</td><td>" + player[i].race + "</td><td>" + player[i].wins + "</td><td>" + player[i].losses + "</td><tr>");
+		}
+	});		
+
+	$(document).on("click", "#page4", function() { 
+		for (var i = 60; i < 79; i++) {
+			table.append("<tr><td>" + player[i].username + "</td><td>" + player[i].fullname + "</td><td>" + player[i].region + "</td><td>" + player[i].race + "</td><td>" + player[i].wins + "</td><td>" + player[i].losses + "</td><tr>");
+		}
+	});	
+
+	$(document).on("click", "#page5", function() { 
+		for (var i = 80; i < 99; i++) {
+			table.append("<tr><td>" + player[i].username + "</td><td>" + player[i].fullname + "</td><td>" + player[i].region + "</td><td>" + player[i].race + "</td><td>" + player[i].wins + "</td><td>" + player[i].losses + "</td><tr>");
+		}
+	});	
+
+
 
 
 
